@@ -23,3 +23,23 @@ less@2.7.9                    # Leaner CSS language
 
 practicalmeteor:mocha             # A package for writing and running your meteor app and package tests with mocha
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
+
+mizzao:bootstrap-3
+dburles:collection-helpers
+aldeed:collection2-core
+aldeed:schema-index
+aldeed:console-helpers
+zimme:active-route
+aldeed:delete-button
+aldeed:template-extension
+aldeed:autoform
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker
+aldeed:autoform-select2
+aldeed:autoform-bs-button-group-input
+chhib:selectize-bootstrap-3
+insecure
+#autopublish
+jcbernack:reactive-aggregate
+momentjs:moment
+rzymek:moment-locale-ru

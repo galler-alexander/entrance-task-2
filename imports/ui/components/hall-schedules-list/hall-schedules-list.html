@@ -1,0 +1,62 @@
+<template name="hallSchedulesList">
+  <h2 class="title title_size_l">Расписание лекций проекта "Мобилизация"</h2>
+  <div class="hall-schedule hall-schedule_multi-day_yes hall-schedule_have-buttons_yes i-bem hall-schedule_js_inited">
+    <table class="hall-schedule__items">
+      <tbody>
+    <!-- <li>
+      <form class="hall-schedule-add">
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="url" name="url" placeholder="Url" required>
+        <input type="submit" name="submit" value="Add new link">
+      </form>
+    </li> -->
+      {{#each hallschedules}}
+            <tr class="hall-schedule__item hall-schedule__item_type_talk">
+              <td rowspan="2" class="hall-schedule__time">
+                <div>
+                    {{formatDateTimeIntervalPart1 startDateTime endDateTime}}
+                </div>
+                <div>
+                  {{formatDateTimeIntervalPart2 startDateTime endDateTime}}
+                </div>
+              </td>
+              <td class="hall-schedule__title">
+                {{#if url}}
+                  <a class="link hall-schedule__title-link" href="{{url}}">{{title}}</a>
+                {{else}}
+                  <p>{{title}}</p>
+                {{/if}}
+              </td>
+              <td class="hall-schedule__hall">
+                {{hall.name}}
+              </td>
+              <td rowspan="2" class="hall-schedule__schools">
+                {{#each schools}}
+                  <div>
+                    <a class="hall-schedule__school" href={{url}}>{{name}}</a>
+                  </div>
+                {{/each}}
+              </td>
+              <td rowspan="2" class="hall-schedule__speakers">
+                {{#each speakers}}
+                  <div class="hall-schedule__speaker">
+                    <a class="username username_yandex_no" href="{{url}}">
+                      {{name}}
+                    </a>
+                    <div class="hall-schedule__company">
+                      {{jobCompany}}
+                    </div>
+                  </div>
+                {{/each}}
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="hall-schedule__desc">
+                  <p>{{desc}}</p>
+              </td>
+            </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+</template>
